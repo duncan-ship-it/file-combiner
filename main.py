@@ -37,7 +37,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Move files from source to destination with duplicates handled.")
     parser.add_argument("source", type=Path, help="Source directory")
     parser.add_argument("dest", type=Path, help="Destination directory")
-    parser.add_argument("-t", "--threads", type=int, default=8, help="Number of worker threads")
+    parser.add_argument("-t", "--threads", type=int, default=2, help="Number of worker threads")
     parser.add_argument("--batch", type=int, default=2000, help="Number of files to process per batch")
     parser.add_argument("--dry-run", action="store_true", help="Print actions without moving files")
     return parser.parse_args()
